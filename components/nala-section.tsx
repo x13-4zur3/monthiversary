@@ -15,7 +15,11 @@ export function NalaSection() {
           <div aria-hidden="true" className="animate-float absolute -top-16 -right-16 size-64 rounded-full bg-[#c9a27e]/20 blur-2xl motion-reduce:animate-none" />
           <div className="relative grid gap-10 md:grid-cols-2 md:items-center">
             <div className="grid aspect-[4/5] place-items-center rounded-[1.5rem] border border-[#c9a27e]/30 bg-[#5c3d2e]/60 text-center sm:rounded-[2rem]">
-              <p className="px-6 text-sm tracking-[0.2em] text-[#e9d8c6] uppercase">{nalaPhotoSlot}</p>
+              <img
+                src="https://www.dropbox.com/scl/fi/o267dpjeph2q4q67iivzu/5AAA3145-6B03-4D87-BFF1-96CE046F6994.jpeg?rlkey=fawt8p7e8neqhqxgx6m1chimj&raw=1"
+                alt="Nala"
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="flex flex-col items-center gap-6 text-center md:items-start md:text-left">
               <p className="text-xs font-medium tracking-[0.25em] text-[#e9d8c6] uppercase">Meet Nala</p>
