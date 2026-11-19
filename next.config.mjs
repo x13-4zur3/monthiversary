@@ -1,11 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
+  output: 'export',
+  images: { unoptimized: true },
+  basePath: '/monthiversary',
+  assetPrefix: '/monthiversary/',
 }
 
 export default nextConfig
