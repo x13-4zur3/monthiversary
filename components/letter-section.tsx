@@ -29,20 +29,43 @@ export function LetterSection() {
         </div>
       </Reveal>
 
+      
       <div className="mt-12 grid gap-4 sm:grid-cols-2 sm:gap-6">
         {giftsFromYou.map((gift, index) => (
           <Reveal key={gift.title} delay={index * 120}>
             <div className="h-full rounded-[2rem] bg-[#8b5e3c] p-6 text-[#fbf5ee] shadow-xl shadow-[#3b2418]/20 transition duration-500 hover:-translate-y-1 sm:p-8 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
-              <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-dashed border-[#c9a27e]/50 bg-[#4a3022] text-sm tracking-wide text-[#e9d8c6]">
-                {`Photo ${index + 1}: ${gift.item}`}
+
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-[#c9a27e]/50 bg-[#4a3022]">
+                <img
+                  src={
+                    index === 0
+                      ? 'https://www.dropbox.com/scl/fi/5dqn92cxsuaycejtjhkvf/IMG_2122.jpeg?rlkey=ifm1mc1czrwgh29xjh1ihsnyo&raw=1'
+                      : 'https://www.dropbox.com/scl/fi/lsnbwee85n0q660bc2p4g/IMG_2123.jpeg?rlkey=xr866gf0zmxls2dkkvnlw53db&raw=1'
+                  }
+                  alt={gift.item}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
               </div>
-              <Heart className="mt-5 size-6 fill-[#c9a27e] text-[#c9a27e]" aria-hidden="true" />
-              <h3 className="mt-4 text-2xl font-semibold">{gift.title}</h3>
-              <p className="mt-3 leading-relaxed text-[#e9d8c6]">{gift.note}</p>
+      
+              <Heart
+                className="mt-5 size-6 fill-[#c9a27e] text-[#c9a27e]"
+                aria-hidden="true"
+              />
+      
+              <h3 className="mt-4 text-2xl font-semibold">
+                {gift.title}
+              </h3>
+      
+              <p className="mt-3 leading-relaxed text-[#e9d8c6]">
+                {gift.note}
+              </p>
+      
             </div>
           </Reveal>
         ))}
       </div>
+
 
       <ul className="mt-20 flex flex-col items-center gap-6 text-center">
         {reassurances.map((line, index) => (
