@@ -10,11 +10,10 @@ export const author = {
 export const relationshipStory = {
   startedOn: 'October 18, 2026',
   startedOnLabel: 'The day we first started talking',
-  cities: 'Ottawa & Laval, Québec',
-  distanceNote: 'Still an ocean of kilometers between us, but every message has felt close.',
+  cities: 'Ottawa & Laval',
+  distanceNote: 'Still a 2 hour distance between us, but every message has felt close.',
 }
 
-// Placeholder slots. Replace each with a real photo later by adding an image source here.
 export const photoSlots = [1, 2, 3, 4, 5, 6]
 
 export const nalaPhotoSlot = 'Photo of Nala'
